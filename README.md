@@ -52,8 +52,8 @@ Actual time needed to complete: 30 minutes
 
 Estimate of time needed to complete: 1 hour
 
-Start time: 7:00 PM PST
+Start time: 8:00 PM PST
 
-Finish time: 7:30 PM PST
+Finish time:  PM PST
 
-Actual time needed to complete: 30 minutes
+Actual time needed to complete: TBD
