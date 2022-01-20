@@ -5,6 +5,7 @@ const express = require('express');
 
 const cors = require('cors');
 
+
 require('dotenv').config();
 const app = express();
 app.use(cors());
@@ -13,6 +14,8 @@ app.use(cors());
 const PORT = process.env.PORT || 3002;
 
 const weatherData = require('./data/weather.json');
+
+const axios = require('axios');
 
 //Core route: hit http://localhost:3002
 app.get('/', (request, response) => {
@@ -39,16 +42,23 @@ app.get('/throw-an-error', (request, response) => {
   throw 'Something went really wrong!';
 });
 
-//Weather Route for json data https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=API_KEY&include=minutely
-app.get('/weather', (request, response) => {
+//http://localhost:3002/weather?cityName=Seattle
+
+// Weather Route for json data https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh,NC&key=API_KEY
+app.get('/weather', async (request, response) => {
   let cityName = request.query.city_name;
   // let latitude = request.query.lat;
   // let longitude = request.query.lon;
-  let url = `https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=${WEATHER_API_KEY}&include=minutely`;
-  // let findCity = weatherData.filter(city => city.city_name === cityName || city.lat || city.lon === latitude && longitude);
-  let findCity = weatherData.filter(city => city.city_name === cityName);
+
+  let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${cityName}&key=${process.env.WEATHER_API_KEY}`;
+
+  // let url = `https://api.weatherbit.io/v2.0/current?city=${cityName}&key=${process.env.WEATHER_API_KEY}&include=minutely`;
+
+  let weatherResults = await axios.get(url);
+  // let findCity = weatherResults.filter(city => city.city_name === cityName || city.lat || city.lon === latitude && longitude);
+  // let findCity = weatherResults.filter(city => city.city_name === cityName);
   // console.log(findCity);
-  let groomedData = findCity[0].data.map(day => new Forecast(day));
+  let groomedData = weatherResults.data.data.map(day => new Forecast(day));
 
   response.send(groomedData);
 });
