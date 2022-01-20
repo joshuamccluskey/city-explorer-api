@@ -39,11 +39,12 @@ app.get('/throw-an-error', (request, response) => {
   throw 'Something went really wrong!';
 });
 
-//Weather Route for json data
+//Weather Route for json data https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=API_KEY&include=minutely
 app.get('/weather', (request, response) => {
   let cityName = request.query.city_name;
   // let latitude = request.query.lat;
   // let longitude = request.query.lon;
+  let url = `https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=${WEATHER_API_KEY}&include=minutely`;
   // let findCity = weatherData.filter(city => city.city_name === cityName || city.lat || city.lon === latitude && longitude);
   let findCity = weatherData.filter(city => city.city_name === cityName);
   // console.log(findCity);
