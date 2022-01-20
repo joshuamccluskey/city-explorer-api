@@ -35,6 +35,7 @@ City Explorer API
 ## Change Log
 
 01.18.2022 7:30 PM PST Completed server repo
+01.18.2022 10:00 PM PST Completed back-end server taks Card 2
 
 ## Credit and Collaborations
 
@@ -54,6 +55,6 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 8:00 PM PST
 
-Finish time:  PM PST
+Finish time: 10:00 PM PST
 
-Actual time needed to complete: TBD
+Actual time needed to complete: 2 Hours

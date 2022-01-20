@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/joshuamccluskey/city-explorer-api#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
     "express": "^4.17.2"
   }
 }
