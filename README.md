@@ -22,8 +22,11 @@ City Explorer API
 - `nodemon`
 
 ## Architecture
+![Diagram](./public/img/Lab%2006%20Web%20Request%20Response%20Cycle%201.png)
+![Server Diagram](./public/img/wwrc-lab2.png)
+![API Diagram](./public/img/WRRC%20API%20Diagram%20CJ.png)
+![Require Diagram](./img/WRRC%20Require.png)
 
-![Server Diagram](./img/wwrc-lab2.png)
 
 - Express
 - Nodemon
