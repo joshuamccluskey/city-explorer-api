@@ -26,6 +26,7 @@ City Explorer API
 ![Server Diagram](./public/img/wwrc-lab2.png)
 ![API Diagram](./public/img/WRRC%20API%20Diagram%20CJ.png)
 ![Require Diagram](./img/WRRC%20Require.png)
+![Cache Diagram](./img/lab10%20wrrc.png)
 
 
 - Express
@@ -37,8 +38,9 @@ City Explorer API
 
 ## Change Log
 
-01.18.2022 7:30 PM PST Completed server repo
-01.18.2022 10:00 PM PST Completed back-end server taks Card 2
+- 01.18.2022 7:30 PM PST Completed server repo
+- 01.18.2022 10:00 PM PST Completed back-end server taks Card 2
+- 01.21.2021 05:30 PM PST - Updates for lab 07
 
 ## Credit and Collaborations
 
@@ -61,3 +63,23 @@ Start time: 8:00 PM PST
 Finish time: 10:00 PM PST
 
 Actual time needed to complete: 2 Hours
+
+### Lab 07 Updates
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 4:15 PM PST
+
+Finish time: 5:30 PM PST
+
+Actual time needed to complete: 1.25 hours
+
+### Lab08 API Card 1
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 9:30 PM PST
+
+Finish time: 12:30 PM PST
+
+Actual time needed to complete: 3 hours
