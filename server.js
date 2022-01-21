@@ -41,22 +41,18 @@ app.get('/throw-an-error', (request, response) => {
 
 //Weather Route for json data
 app.get('/weather', (request, response) => {
-  let cityName = request.query.city_name;
-  // let latitude = request.query.lat;
-  // let longitude = request.query.lon;
-  // let findCity = weatherData.filter(city => city.city_name === cityName || city.lat || city.lon === latitude && longitude);
-  let findCity = weatherData.filter(city => city.city_name === cityName);
-  // console.log(findCity);
-  let groomedData = findCity[0].data.map(day => new Forecast(day));
-
-  response.send(groomedData);
-});
-
-
-//Catch Route Always Must be the last route in file and can control the message
-app.get('*', (request, response) => {
-  response.status(404).send('UH OH! Something\'s Wrong!');
-
+  try {
+    let cityName = request.query.city_name;
+    // let latitude = request.query.lat;
+    // let longitude = request.query.lon;
+    // let findCity = weatherData.filter(city => city.city_name === cityName || city.lat || city.lon === latitude && longitude);
+    let findCity = weatherData.filter(city => city.city_name === cityName);
+    // console.log(findCity);
+    let groomedData = findCity[0].data.map(day => new Forecast(day));
+    response.send(groomedData);
+  } catch (error) {
+    response.send('UH OH! Something\'s Wrong! City Not Found!');
+  }
 });
 
 class Forecast {
@@ -65,5 +61,18 @@ class Forecast {
     this.description = day.weather.description;
   }
 }
+
+
+//Catch Route Always Must be the last route in file and can control the message
+app.get('*', (request, response) => {
+  response.status(400).send('UH OH! Something\'s Wrong Status 400!');
+});
+app.get('*', (request, response) => {
+  response.status(404).send('UH OH! Something\'s Wrong! Status 404');
+});
+app.get('*', (request, response) => {
+  response.status(500).send('UH OH! Something\'s Wrong! Status 500');
+});
+
 //Listener for requests
 app.listen(PORT, () => console.log(`listening ${PORT}`));
