@@ -2,7 +2,7 @@
 
 //Require used in servers instead of import
 const express = require('express');
-
+const axios = require('axios')
 const cors = require('cors');
 
 require('dotenv').config();
@@ -11,8 +11,6 @@ app.use(cors());
 
 //Any Middleware goes after app is instantiated
 const PORT = process.env.PORT || 3002;
-
-const weatherData = require('./data/weather.json');
 
 //Core route: hit http://localhost:3002
 app.get('/', (request, response) => {
@@ -40,38 +38,42 @@ app.get('/throw-an-error', (request, response) => {
 });
 
 //Weather Route for json data
-app.get('/weather', (request, response) => {
+async function getWeatherDaily(request, response) {
+  // try 
+  let cityName = request.query.city_name;
+  let latitude = request.query.lat;
+  let longitude = request.query.lon;
+
+  let url = `https://api.weatherbit.io/v2.0/forecast/daily?lat=${latitude}&lon=${longitude}&key=${process.env.WEATHER_API_KEY}`;
+
   try {
-    let cityName = request.query.city_name;
-    // let latitude = request.query.lat;
-    // let longitude = request.query.lon;
-    // let findCity = weatherData.filter(city => city.city_name === cityName || city.lat || city.lon === latitude && longitude);
-    let findCity = weatherData.filter(city => city.city_name === cityName);
-    // console.log(findCity);
-    let groomedData = findCity[0].data.map(day => new Forecast(day));
-    response.send(groomedData);
-  } catch (error) {
-    response.send('UH OH! Something\'s Wrong! City Not Found!');
+    let weatherResults = await axios.get(url);
+    let WeatherArr = weatherResults.data.data.map(day => new Forecast(day));
+    response.send(WeatherArr);
+  } catch (error) {response.send('error');
   }
-});
+
+
+  // let findCity = weatherData.filter(city => city.city_name === cityName || city.lat || city.lon === latitude && longitude);
+  // let findCity = weatherResults.filter(city => city.city_name === cityName);
+  // console.log(findCity);
+  // let groomedData = findCity.data.data.map(day => new Forecast(day));
+  // } catch (error) {
+  //   response.send('UH OH! Something\'s Wrong! City Not Found!');
+}
 
 class Forecast {
   constructor(day) {
-    this.datetime = day.datetime;
+    this.datetime = day.valid_date;
     this.description = day.weather.description;
   }
 }
 
 
 //Catch Route Always Must be the last route in file and can control the message
-app.get('*', (request, response) => {
-  response.status(400).send('UH OH! Something\'s Wrong Status 400!');
-});
+
 app.get('*', (request, response) => {
   response.status(404).send('UH OH! Something\'s Wrong! Status 404');
-});
-app.get('*', (request, response) => {
-  response.status(500).send('UH OH! Something\'s Wrong! Status 500');
 });
 
 //Listener for requests
