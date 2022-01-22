@@ -23,11 +23,11 @@ City Explorer API
 
 ## Architecture
 
-![Diagram](./public/img/Lab%2006%20Web%20Request%20Response%20Cycle%201.png)
-![Server Diagram](./public/img/wwrc-lab2.png)
-![API Diagram](./public/img/WRRC%20API%20Diagram%20CJ.png)
-![Require Diagram](./img/WRRC%20Require.png)
-![Cache Diagram](./img/lab10%20wrrc.png)
+![Diagram](./img/lab06.png)
+![Server Diagram](./img/lab07.png)
+![API Diagram](./img/lab08.png)
+![Require Diagram](./img/lab09.png)
+![Cache Diagram](./img/lab10.png)
 
 - Express
 - Nodemon
@@ -42,6 +42,8 @@ City Explorer API
 - 01.18.2022 10:00 PM PST Completed back-end server taks Card 2
 - 01.20.2021 05:30 PM PST - Updates for lab 07
 - 01.21.2021 02:30 PM PST - Lab08 Complete Deployment on Heroku
+- 01.21.2021 02:30 PM PST - Lab09 Code Base Refactored
+
 
 ## Credit and Collaborations
 
@@ -93,10 +95,20 @@ Actual time needed to complete: 3 hours
 
 ### Lab08 Complete
 
-Estimate of time needed to complete: 1 hour
+Estimate of time needed to complete: 3 hour
 
 Start time: 9:30 PM PST
 
 Finish time: 12:30 PM PST
 
 Actual time needed to complete: 3 hours
+
+### Lab09
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 8:30 PM PST
+
+Finish time: 10:00 PM PST
+
+Actual time needed to complete: 2.5 hours
