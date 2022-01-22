@@ -40,7 +40,8 @@ City Explorer API
 
 - 01.18.2022 7:30 PM PST Completed server repo
 - 01.18.2022 10:00 PM PST Completed back-end server taks Card 2
-- 01.21.2021 05:30 PM PST - Updates for lab 07
+- 01.20.2021 05:30 PM PST - Updates for lab 07
+- 01.21.2021 02:30 PM PST - Lab08 Complete Deployment on Heroku
 
 ## Credit and Collaborations
 
@@ -81,6 +82,16 @@ Finish time: 5:30 PM PST
 Actual time needed to complete: 1.25 hours
 
 ### Lab08 API Card 1
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 9:30 PM PST
+
+Finish time: 12:30 PM PST
+
+Actual time needed to complete: 3 hours
+
+### Lab08 Complete
 
 Estimate of time needed to complete: 1 hour
 
