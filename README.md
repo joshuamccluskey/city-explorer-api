@@ -22,11 +22,12 @@ City Explorer API
 - `nodemon`
 
 ## Architecture
+
 ![Diagram](./public/img/Lab%2006%20Web%20Request%20Response%20Cycle%201.png)
 ![Server Diagram](./public/img/wwrc-lab2.png)
 ![API Diagram](./public/img/WRRC%20API%20Diagram%20CJ.png)
 ![Require Diagram](./img/WRRC%20Require.png)
-
+![Cache Diagram](./img/lab10%20wrrc.png)
 
 - Express
 - Nodemon
@@ -37,10 +38,18 @@ City Explorer API
 
 ## Change Log
 
-01.18.2022 7:30 PM PST Completed server repo
-01.18.2022 10:00 PM PST Completed back-end server taks Card 2
+- 01.18.2022 7:30 PM PST Completed server repo
+- 01.18.2022 10:00 PM PST Completed back-end server taks Card 2
+- 01.20.2021 05:30 PM PST - Updates for lab 07
+- 01.21.2021 02:30 PM PST - Lab08 Complete Deployment on Heroku
 
 ## Credit and Collaborations
+
+- Credit: Kevin Lamarca on collaboration on WRRC Design
+- Credit: Regan Hayes on Collaboration on WRRC Server Diagram
+- Credit: Chuck Altopiedi on Collaboration on WRRC API Diagram
+- Credit: Brian Thornburg on Collaboration on WRRC Require Diagram
+- Credit: Robb Alexander and Brian Thornburg on WRRC Cache Diagram
 
 ### Name of feature: Card 1 Setup Server Repo
 
@@ -61,3 +70,33 @@ Start time: 8:00 PM PST
 Finish time: 10:00 PM PST
 
 Actual time needed to complete: 2 Hours
+
+### Lab 07 Updates
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 4:15 PM PST
+
+Finish time: 5:30 PM PST
+
+Actual time needed to complete: 1.25 hours
+
+### Lab08 API Card 1
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 9:30 PM PST
+
+Finish time: 12:30 PM PST
+
+Actual time needed to complete: 3 hours
+
+### Lab08 Complete
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 9:30 PM PST
+
+Finish time: 12:30 PM PST
+
+Actual time needed to complete: 3 hours
