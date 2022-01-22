@@ -58,9 +58,9 @@ async function getWeather(request, response) {
 }
 
 async function getMovies(req, res) {
-  let cityQuery = req.query.cityQuery;
+  let searchCity = req.query.searchCity;
 
-  let url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${cityQuery}`;
+  let url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${searchCity}`;
 
   let movieResults = await axios.get(url);
   let moviesArr = movieResults.data.results.map(movie => new Movies(movie));
