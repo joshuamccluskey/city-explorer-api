@@ -2,7 +2,7 @@
 
 //Require used in servers instead of import
 const express = require('express');
-const axios = require('axios')
+const axios = require('axios');
 const cors = require('cors');
 const { acceptsEncodings } = require('express/lib/request');
 const { response } = require('express');
@@ -45,12 +45,10 @@ app.get('/throw-an-error', (request, response) => {
 
 //Weather Route for json data
 async function getWeather(request, response) {
-  let lat = request.query.lat;
-  console.log(lat);
+  let lat = request.query.latt;
   let lon = request.query.lon;
-  console.log(lon);
 
-  let url = `https://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lon}&key=${process.env.WEATHER_API_KEY}`;
+  let url = `https://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lon}&key=${process.env.WEATHER_API_KEY}&units=I`;
 
   let weatherResults = await axios.get(url);
   let WeatherArr = weatherResults.data.data.map(day => new Forecast(day));
@@ -73,6 +71,9 @@ class Forecast {
   constructor(day) {
     this.datetime = day.valid_date;
     this.description = day.weather.description;
+    this.low_temp = day.low_temp;
+    this.max_temp = day.max_temp;
+    this.temp = day.temp;
   }
 }
 
@@ -81,6 +82,7 @@ class Movies {
     this.title = movie.original_title;
     this.overview = movie.overview;
     this.image_url = movie.poster_path;
+    this.release_date = movie.release_date;
   }
 }
 //Catch Route Always Must be the last route in file and can control the message
