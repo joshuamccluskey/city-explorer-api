@@ -22,12 +22,12 @@ City Explorer API
 - `nodemon`
 
 ## Architecture
+
 ![Diagram](./public/img/Lab%2006%20Web%20Request%20Response%20Cycle%201.png)
 ![Server Diagram](./public/img/wwrc-lab2.png)
 ![API Diagram](./public/img/WRRC%20API%20Diagram%20CJ.png)
 ![Require Diagram](./img/WRRC%20Require.png)
 ![Cache Diagram](./img/lab10%20wrrc.png)
-
 
 - Express
 - Nodemon
@@ -43,6 +43,12 @@ City Explorer API
 - 01.21.2021 05:30 PM PST - Updates for lab 07
 
 ## Credit and Collaborations
+
+- Credit: Kevin Lamarca on collaboration on WRRC Design
+- Credit: Regan Hayes on Collaboration on WRRC Server Diagram
+- Credit: Chuck Altopiedi on Collaboration on WRRC API Diagram
+- Credit: Brian Thornburg on Collaboration on WRRC Require Diagram
+- Credit: Robb Alexander and Brian Thornburg on WRRC Cache Diagram
 
 ### Name of feature: Card 1 Setup Server Repo
 
