@@ -112,3 +112,13 @@ Start time: 8:30 PM PST
 Finish time: 10:00 PM PST
 
 Actual time needed to complete: 2.5 hours
+
+### Lab10
+
+Estimate of time needed to complete: 2 hour
+
+Start time: 2:00 AM PST
+
+Finish time: 3:00 AM PST
+
+Actual time needed to complete: 1 hours
