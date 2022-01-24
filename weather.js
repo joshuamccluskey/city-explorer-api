@@ -10,7 +10,7 @@ async function getWeather(request, response) {
   let lat = request.query.lat;
   let lon = request.query.lon; 
   const key = lat + lon + 'weather';
-  const url = `http://api.weatherbit.io/v2.0/forecast/daily/?key=${WEATHER_API_KEY}&lang=en&lat=${lat}&lon=${lon}&days=5`;
+  const url = `http://api.weatherbit.io/v2.0/forecast/daily/?key=${process.env.WEATHER_API_KEY}&lang=en&lat=${lat}&lon=${lon}&days=5`;
 
   if (cache[key] && (Date.now() - cache[key].timestamp < 50000)) {
     console.log('Cache hit');
@@ -18,14 +18,14 @@ async function getWeather(request, response) {
   } else {
     console.log('Cache miss');
     let weatherResults = await axios.get(url);
-    let weatherArr = weatherResults.data.data.map(day => new Forecast(day));
+    let weatherArr = weatherResults.data.data.map(day => new Weather(day));
     response.send(weatherArr);
     cache[key] = {
       data: weatherArr,
       timestamp: Date.now()
-
+      
     };
-      .then(response => parseWeather(response.body));
+    .then(response => parseWeather(response.body));
   }
 
   return cache[key].data;
