@@ -6,7 +6,9 @@ const axios = require('axios');
 let cache = {};
 
 
-function getWeather(latitude, longitude) {
+function getWeather(request, response) {
+  let latitude = request.query.lat;
+  let longitude = request.query.lon; 
   const key = latitude + longitude + 'weather';
   const url = `http://api.weatherbit.io/v2.0/forecast/daily/?key=${WEATHER_API_KEY}&lang=en&lat=${latitude}&lon=${longitude}&days=5`;
 
