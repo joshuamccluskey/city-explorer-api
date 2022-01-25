@@ -8,6 +8,7 @@ let cache = require('./cache.js');
 module.exports = getWeather;
 
 function getWeather(lat, lon) {
+  console.log('This is getWeather');
   const key = 'weather-' + lat + lon;
   const url = `http://api.weatherbit.io/v2.0/forecast/daily/?key=${process.env.WEATHER_API_KEY}&lang=en&lat=${lat}&lon=${lon}&days=5`;
 

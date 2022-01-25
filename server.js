@@ -14,6 +14,7 @@ app.get('/movies', moviesHandler);
 
 function weatherHandler(request, response) {
   const { lat, lon } = request.query;
+  console.log(lat, lon);
   getWeather(lat, lon)
     .then(summaries => response.send(summaries))
     .catch((error) => {
@@ -22,10 +23,9 @@ function weatherHandler(request, response) {
     });
 }
 
-app.get('/movies', moviesHandler);
 function moviesHandler(request, response) {
-  const { searchQuery } = request.query;
-  getMovies(searchQuery)
+  const { searchCity } = request.query;
+  getMovies(searchCity)
     .then(summaries => response.send(summaries))
     .catch((error) => {
       console.error(error);

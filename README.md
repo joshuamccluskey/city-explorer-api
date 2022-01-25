@@ -43,6 +43,8 @@ City Explorer API
 - 01.20.2021 05:30 PM PST - Updates for lab 07
 - 01.21.2021 02:30 PM PST - Lab08 Complete Deployment on Heroku
 - 01.21.2021 02:30 PM PST - Lab09 Code Base Refactored
+- 01.25.2021 04:30 AM PST - Troubleshooted Server back up
+- 01.25.2021 02:00 PM PST - Lab 10,9,8,7 updates and Complete
 
 
 ## Credit and Collaborations
@@ -122,3 +124,13 @@ Start time: 2:00 AM PST
 Finish time: 3:00 AM PST
 
 Actual time needed to complete: 1 hours
+
+### Lab10 Part Deux
+
+Estimate of time needed to complete: 2 hour
+
+Start time: 2:30 AM PST
+
+Finish time: 4:30 AM PST
+
+Actual time needed to complete: 2 hours

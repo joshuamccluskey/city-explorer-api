@@ -26,7 +26,7 @@ function getMovies(searchCity) {
 
 function parseMovies(moviesData) {
   try {
-    const moviesSummaries = moviesData.data.map(movie => {
+    const moviesSummaries = moviesData.results.map(movie => {
       return new Movies(movie);
     });
     return Promise.resolve(moviesSummaries);
