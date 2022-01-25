@@ -8,7 +8,7 @@ let cache = {};
 
 async function getMovies(request, response) {
   let searchCity = request.query.searchCity;
-  const key = searchCity + 'movies';
+  const key = searchCity + 'location';
 
   let url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${searchCity}`;
 
